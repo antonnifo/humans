@@ -4,5 +4,8 @@
 {% block content %}
     <h1>Dashboard</h1>
     <p>Hello {{request.user.first_name }} Welcome to your dashboard.</p>
-    <a href="{% url "logout" %}">Logout</a>
+    <p>You can <a href="{% url "edit" %}">edit your profile</a> or <a href="{% url "password_change" %}">change your password</a> 
+        or <a href="{% url "logout" %}">Logout</a></p>
+    
+    
 {% endblock %}
