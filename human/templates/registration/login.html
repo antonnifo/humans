@@ -8,7 +8,8 @@
         Please try again.
         </p>
     {% else %}
-        <p>Use the following form to log-in:</p>
+        <p>Use the following form to log-in. If you don't have an
+account <a href="{% url "register" %}">register here</a></p>
     {% endif %}
 
     <div class="login-form">
