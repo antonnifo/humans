@@ -7,8 +7,15 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    {% block content %}
-    
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                {% comment %} <li class="{{ message.tags }}"> {% endcomment %}
+                <li>{{ message|safe }} <a href="#" class="close">x</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}    
+    {% block content %}  
     {% endblock %}
 </body>
 </html>
