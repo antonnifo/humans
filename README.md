@@ -1,4 +1,5 @@
-# humans
+# Humans [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)   
+
 A Reusable Django authentication app for users to register, log in, edit their profile, and change or reset their password
 
 ## Installation & Setup
@@ -66,4 +67,20 @@ INSTALLED_APPS = [
 5. Run migrations to sync Python Social Auth models and human models with your database.  
 ```
   python manage.py migrate 
+```
+## Available urls. 
+```
+      account/ login/ [name='login']
+      account/ logout/ [name='logout']
+      account/ password_change/ [name='password_change']
+      account/ password_change/done/ [name='password_change_done']
+      account/ password_reset/ [name='password_reset']
+      account/ password_reset/done/ [name='password_reset_done']
+      account/ reset/<uidb64>/<token>/ [name='password_reset_confirm']
+      account/ reset/done/ [name='password_reset_complete']
+      account/ dashboard/ [name='dashboard']
+      account/ register/ [name='register']
+      account/ edit/ [name='edit']
+      social-auth/
+                 ^(?P<path>.*)$ 
 ```
