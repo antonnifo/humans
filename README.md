@@ -8,15 +8,16 @@ A Reusable Django authentication app for users to register, log in, edit their p
 Assuming you have a project setup and a virtual environment, follow the steps below. 
 1. Install `social-auth-app-django` in your virtual environment.  
 ```
-    pip install social-auth-app-django
+    pip install social-auth-app-django pillow
 ```
 
-2. Register the **social-auth-app-django** and the **human** app in installed apps.  
+2. Register the **social-auth-app-django**, **human** & **pillow** app in installed apps.  
 ```
 INSTALLED_APPS = [
                     #...
                     'human',  
                     'social_django',
+                    'pillow',
       ] 
 ```
 3. Configure the following fields in the settings.py according to your project.
@@ -81,6 +82,5 @@ INSTALLED_APPS = [
       account/ dashboard/ [name='dashboard']
       account/ register/ [name='register']
       account/ edit/ [name='edit']
-      social-auth/
-                 ^(?P<path>.*)$ 
+      social-auth/^(?P<path>.*)$ 
 ```
