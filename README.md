@@ -17,7 +17,6 @@ INSTALLED_APPS = [
                     #...
                     'human',  
                     'social_django',
-                    'pillow',
       ] 
 ```
 3. Configure the following fields in the settings.py according to your project.
