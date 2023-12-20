@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from account.models import Profile
+from human.models import Profile
 
 class EmailAuthBackend(object):
     """
@@ -23,8 +23,8 @@ class EmailAuthBackend(object):
         
 def create_profile(backend, user, *args, **kwargs):
     """
-    Create user profile for social authentication
+    Create a user profile for social authentication
     """
-    MainProfile.objects.get_or_create(user=user)
+    Profile.objects.get_or_create(user=user)
     
     
